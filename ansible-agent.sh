@@ -9,6 +9,7 @@ systemctl restart sshd
 useradd ansible
 echo -e "12345\n12345" | passwd ansible
 
+echo ansible | sudo -S su - ansible -c "ssh-keygen -t rsa -f /root/.ssh/id_rsa -q -P ''"
 
 echo "ansible ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sed -i "s/^.*requiretty/#Defaults requiretty/" /etc/sudoers
