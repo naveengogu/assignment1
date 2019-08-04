@@ -18,5 +18,6 @@ sed -i "s/^.*requiretty/#Defaults requiretty/" /etc/sudoers
 
 sudo /usr/bin/cp /vagrant/hosts /etc/ansible/hosts
 cd ~
-mkdir workspace && workspace
+mkdir workspace 
+cd workspace
 git clone https://github.com/naveengogu/ansible-tomcat8.git
