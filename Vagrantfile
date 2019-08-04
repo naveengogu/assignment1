@@ -16,7 +16,7 @@ ansible1.vm.box_url = "centos/7"
 ansible1.vm.network :private_network,
       ip: HOST_IP,
       netmask: '255.255.255.0'
-ansible1.vm.network :forwarded_port, guest: 8800, host: 8080
+ansible1.vm.network :forwarded_port, guest: 8080, host: 8080
 #ansible1.vm.synced_folder 'html', '/var/www/html'
 ansible1.vm.provision 'shell', path: 'jenkis-master.sh'	
 end
